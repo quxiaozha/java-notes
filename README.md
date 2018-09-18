@@ -1,2 +1,3 @@
 # java-notes
-my java notes
+### just some notes...
+
