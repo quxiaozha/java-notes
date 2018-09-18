@@ -30,5 +30,23 @@ public class testStudent {
 
         student1.addr = latestAddr;//直接拿到引用，可以改变student1的addr属性
         System.out.println(student1.getAddr().getHomeAddr() + ">" + student1.getAddr().getWorkAddr());
+
+        /**
+         * python:
+         * def f(x, l=[]):
+         *     for i in range(x):
+         *         l.append(i * i)
+         *     print(l)
+         *
+         * f(2)
+         * f(3, [3, 2, 1])
+         * f(4)
+         *
+         * result:
+         * [0, 1]
+         * [3, 2, 1, 0, 1, 4]
+         * [0, 1, 0, 1, 4]
+         * 注意第三个，这是由于它使用了之前内存地址中存储的旧列表l[0,1]。
+         **/
     }
 }
