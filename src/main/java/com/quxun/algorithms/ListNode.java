@@ -1,7 +1,8 @@
 package com.quxun.algorithms;
 
 /**
- * Description:单链表反转
+ * Description:reverse:单链表反转
+ *             addTwoNumbers:两个链表相加得到一个新链表
  * Created by quxiaozha on 2018-9-18 9:20.
  */
 public class ListNode {
