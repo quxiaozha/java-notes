@@ -1,7 +1,7 @@
 package com.quxun.algorithms;
 
 /**
- * Description:单链表反转
+ * Description:单链表反转 https://leetcode-cn.com/problems/reverse-linked-list/
  * Created by quxiaozha on 2018-9-20 9:13.
  */
 public class ListNodeReverse {
@@ -14,15 +14,16 @@ public class ListNodeReverse {
      * @return com.quxun.algorithms.ListNode
      **/
     public static ListNode reverse(ListNode node) {
-        ListNode prev = null;
-        ListNode now = node;
-        while (now != null) {
-            ListNode next = now.next;
-            now.next = prev;
-            prev = now;
-            now = next;
+        ListNode pre = null;
+        ListNode cur = node;
+        ListNode nex = null;
+        while(cur != null){
+            nex = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = nex;
         }
-        return prev;
+        return pre;
     }
 
     /**
