@@ -1,7 +1,7 @@
 package com.quxun.algorithms;
 
 /**
- * Description:
+ * Description:翻转字符串里的单词 https://leetcode-cn.com/problems/reverse-words-in-a-string/description/#
  * Created by quxiaozha on 2018-9-20 16:39.
  */
 public class ReverseWordsInAString {
