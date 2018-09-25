@@ -1,6 +1,8 @@
 package com.quxun.algorithms;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -44,14 +46,30 @@ public class LongestSubstring {
                 res = Math.max(res, t.size());
             } else {
                 //只让left++，right没变，所以如果s.charAt(right)没有被移除，
-                // 上面的t.contains(s.charAt(right))会一直true，会循环执行t.remove
+                //上面的t.contains(s.charAt(right))会一直true，会循环执行t.remove
                 t.remove(s.charAt(left++));
             }
         }
         return res;
     }
 
+    public static int lengthOfLongestSubstring3(String s) {
+        int n = s.length(), ans = 0;
+        Map<Character, Integer> map = new HashMap<>(); // current index of character
+        // try to extend the range [i, j]
+        for (int j = 0, i = 0; j < n; j++) {
+            if (map.containsKey(s.charAt(j))) {
+                i = Math.max(map.get(s.charAt(j)), i);
+            }
+            ans = Math.max(ans, j - i + 1);
+            map.put(s.charAt(j), j + 1);
+        }
+        return ans;
+    }
+
     public static void main(String[] args) {
+        System.out.println(lengthOfLongestSubstring("abcddcbabcbbghac"));
         System.out.println(lengthOfLongestSubstring2("abcddcbabcbbghac"));
+        System.out.println(lengthOfLongestSubstring3("abcdabcd"));
     }
 }
