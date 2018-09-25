@@ -4,7 +4,7 @@ package com.quxun.object;
  * Description:
  * Created by quxiaozha on 2018-9-18 13:05.
  */
-public class testStudent {
+public class TestStudent {
     public static void main(String[] args) {
         Address addr = new Address("home address", "company address");
         Student student1 = new Student(1, "qq", addr);

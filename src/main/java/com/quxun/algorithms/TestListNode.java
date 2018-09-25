@@ -4,7 +4,7 @@ package com.quxun.algorithms;
  * Description:
  * Created by quxiaozha on 2018-9-20 9:22.
  */
-public class testListNode {
+public class TestListNode {
     public static void main(String[] args) {
         ListNode node5 = new ListNode(9, null);
         ListNode node4 = new ListNode(8, node5);
