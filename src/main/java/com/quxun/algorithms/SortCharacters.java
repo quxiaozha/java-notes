@@ -26,7 +26,7 @@ public class SortCharacters {
             }
         });
 
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         for(Map.Entry<Character, Integer> e:list){
             //System.out.println(e.getKey() + ">" +e.getValue());
             for(int i = 0; i < e.getValue(); i++){
@@ -51,6 +51,9 @@ public class SortCharacters {
             index = end;
         }
 
+        if(list.size() == 0 || list.size() == 1){
+            return s;
+        }
         Collections.sort(list, new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
@@ -58,7 +61,7 @@ public class SortCharacters {
             }
         });
 
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         for (String sc : list) {
             sb.append(sc);
         }
@@ -67,7 +70,8 @@ public class SortCharacters {
     }
 
     public static void main(String[] args) {
-        System.out.println(frequencySort2("ascfeewqadsfddssasaxz"));
+        System.out.println(frequencySort2("ssss"));
         System.out.println(frequencySort("ascfeewqadsfddssasaxz"));
+
     }
 }
