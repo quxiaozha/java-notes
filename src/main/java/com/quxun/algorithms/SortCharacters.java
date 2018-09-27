@@ -28,7 +28,7 @@ public class SortCharacters {
 
         StringBuffer sb = new StringBuffer();
         for(Map.Entry<Character, Integer> e:list){
-            System.out.println(e.getKey() + ">" +e.getValue());
+            //System.out.println(e.getKey() + ">" +e.getValue());
             for(int i = 0; i < e.getValue(); i++){
                 sb.append(e.getKey());
             }
@@ -68,5 +68,6 @@ public class SortCharacters {
 
     public static void main(String[] args) {
         System.out.println(frequencySort2("ascfeewqadsfddssasaxz"));
+        System.out.println(frequencySort("ascfeewqadsfddssasaxz"));
     }
 }
