@@ -90,10 +90,10 @@ public class SudokuSolver {
         return false;
     }
 
-    boolean[][] row = new boolean[9][9];
-    boolean[][] col = new boolean[9][9];
-    boolean[][] subBox = new boolean[9][9];
-    public void solveSudoku2(char[][] board) {
+    static boolean[][] row = new boolean[9][9];
+    static boolean[][] col = new boolean[9][9];
+    static boolean[][] subBox = new boolean[9][9];
+    public static void solveSudoku2(char[][] board) {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 if (board[i][j] != '.') {
@@ -107,7 +107,7 @@ public class SudokuSolver {
         fillSudoku(0, 0, board);
     }
 
-    private boolean fillSudoku(int i, int j, char[][] board) {
+    private static boolean fillSudoku(int i, int j, char[][] board) {
         if (i == 9) {
             return true;
         }
@@ -136,8 +136,9 @@ public class SudokuSolver {
 
     public static void main(String[] args) {
         char[][] chars = {{'5','3','.','.','7','.','.','.','.'},{'6','.','.','1','9','5','.','.','.'},{'.','9','8','.','.','.','.','6','.'},{'8','.','.','.','6','.','.','.','3'},{'4','.','.','8','.','3','.','.','1'},{'7','.','.','.','2','.','.','.','6'},{'.','6','.','.','.','.','2','8','.'},{'.','.','.','4','1','9','.','.','5'},{'.','.','.','.','8','.','.','7','9'}};
-        solveSudoku(chars);
-        for (char[] chars1 : chars) {
+        char[][] chars2 = {{'.','.','.','.','.','.','.','.','.'},{'.','.','.','.','.','.','.','.','.'},{'.','.','.','.','.','.','.','.','.'},{'.','.','.','.','.','.','.','.','.'},{'.','.','.','.','.','.','.','.','.'},{'.','.','.','.','.','.','.','.','.'},{'.','.','.','.','.','.','.','.','.'},{'.','.','.','.','.','.','.','.','.'},{'.','.','.','.','.','.','.','.','.'}};
+        solveSudoku2(chars2);
+        for (char[] chars1 : chars2) {
             System.out.println(chars1);
         }
     }
