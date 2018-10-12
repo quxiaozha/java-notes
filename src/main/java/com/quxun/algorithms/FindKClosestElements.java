@@ -47,7 +47,7 @@ public class FindKClosestElements {
     public static List<Integer> findClosestElements2(int[] arr, int k, int x) {
         List<Integer> list = new ArrayList<>();
         int start = 0, end = arr.length - 1;
-        while(end - start + 1 > k){
+        while (end - start + 1 > k) {
             if (Math.abs(arr[start] - x) > Math.abs(arr[end] - x)) {
                 start++;
             } else {
@@ -60,11 +60,28 @@ public class FindKClosestElements {
         return list;
     }
 
+    public static List<Integer> findClosestElements3(int[] arr, int k, int x) {
+        List<Integer> list = new ArrayList<>();
+        int start = 0, end = arr.length - k;
+        while (start < end) {
+            int mid = (start + end) / 2;
+            //比较mid和mid+k与x的距离
+            if (Math.abs(arr[mid] - x) > Math.abs(arr[mid + k] - x)) {
+                start = mid + 1;//由于数组有序，如果大于说明mid离x较远，越往mid左侧越远，最优解在mid右侧，所以start必定>=mid+1
+            } else {
+                end = mid;//由于数组有序，如果小于说明mid+k离x较远，越往mid+k右侧越远，最优解在mid左侧，所以start必定<=mid
+            }
+        }
+        for (int j = start; j < start + k; j++) {
+            list.add(arr[j]);
+        }
+        return list;
+    }
+
     public static void main(String[] args) {
-        int[] arr = {1};
-        List<Integer> list = findClosestElements2(arr, 1, 1);
-        for (Integer i :
-                list) {
+        int[] arr = {1, 2, 3, 4, 5, 7, 8, 9};
+        List<Integer> list = findClosestElements3(arr, 3, 6);
+        for (Integer i : list) {
             System.out.println(i);
         }
     }
