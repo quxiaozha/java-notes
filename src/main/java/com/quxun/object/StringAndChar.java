@@ -13,6 +13,7 @@ public class StringAndChar {
         ex.change(ex.str, ex.ch);
         System.out.print(ex.str + " and ");
         System.out.print(ex.ch);
+        System.out.println("999=".split("=")[0]);//只有一个
     }
 
     public void change(String str, char ch[]) {
