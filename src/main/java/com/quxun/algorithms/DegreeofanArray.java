@@ -3,6 +3,10 @@ package com.quxun.algorithms;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 697. Degree of an Array
+ * https://leetcode-cn.com/problems/degree-of-an-array/submissions/
+ */
 public class DegreeofanArray {
     public static int findShortestSubArray(int[] nums) {
         Map<Integer, int[]> map = new HashMap<>();
