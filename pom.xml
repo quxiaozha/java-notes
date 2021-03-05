@@ -2,16 +2,17 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>ggsddu</artifactId>
-        <groupId>com.quxun</groupId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
+<!--    <parent>-->
+<!--        <artifactId>ggsddu</artifactId>-->
+<!--        <groupId>com.quxun</groupId>-->
+<!--        <version>1.0-SNAPSHOT</version>-->
+<!--    </parent>-->
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>java-notes</artifactId>
-
+    <groupId>com.quxun</groupId>
     <name>java-notes</name>
+    <version>1.0-SNAPSHOT</version>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
@@ -29,11 +30,11 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>com.oracle</groupId>
-            <artifactId>ojdbc8</artifactId>
-            <version>11.2.0</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.oracle</groupId>-->
+<!--            <artifactId>ojdbc8</artifactId>-->
+<!--            <version>11.2.0</version>-->
+<!--        </dependency>-->
     </dependencies>
 
 
